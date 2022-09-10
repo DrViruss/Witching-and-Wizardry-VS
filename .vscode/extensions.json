@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "darkhekromant.vintagestory-jsonschemas",
+        "ms-vscode.mono-debug",
+        "ms-dotnettools.csharp"
+    ]
+}

@@ -1,0 +1,128 @@
+{
+  "code": "magicflower",
+  "class": "MagicFlower",
+  "entityclass": "MagicFlower",
+  "blockmaterial": "Plant",
+  "variantgroups": [
+    {
+      "loadFromProperties": "witchingandwizardry:plants/magicflowertype"
+    },
+    { 
+      "code": "state", 
+      "states": ["sprout","harvested", "flowering"]
+    },
+    {
+      "code": "cover",
+      "states": ["free","snow"]
+    }
+  ],
+  "behaviors": [ 
+    {"name": "DropNotSnowCovered"},
+    {"name": "Unstable"}
+  ],
+  "drawtypeByType": {
+    "*-free": "JSON",
+    "*-snow": "JSONAndSnowLayer"
+  },
+  "shapeByType": {
+    "*-sprout-alihotsy-*": {
+      "base" : "game:block/basic/flower-fuller"
+    },
+    "*-alihotsy-*": {
+      "base": "game:block/plant/fern/hartstongue/var*"
+    },
+    
+    "*-aconite-*": {
+      "base" : "witchingandwizardry:blocks/flowers/aconite/{state}"
+    },
+    "*-agapanthus-*": {
+      "base" : "witchingandwizardry:blocks/flowers/aconite/{state}"
+    },
+    
+    "*": {
+      "base": "game:block/plant/tallfern"
+    }
+  },
+  "creativeinventory": { "witchingandwizardry-tab": ["*-flowering-free"] }, 
+  "texturesByType": {
+    "*-aconite-*" : {
+      "leaf" : { "base": "game:block/plant/fern/hartstongue/curved"},
+      "stem": { "base" : "witchingandwizardry:blocks/plants/flowers/aconite/stem"},
+      "petal": { "base" : "witchingandwizardry:blocks/plants/flowers/aconite/petal"}
+    },
+
+    "*-agapanthus-*" : {
+      "leaf" : { "base": "game:block/plant/fern/cinnamonfern/short"},
+      "stem": { "base" : "witchingandwizardry:blocks/plants/flowers/agapanthus/stems"},
+      "petal": { "base" : "witchingandwizardry:blocks/plants/flowers/agapanthus/petals"}
+    },
+    
+    "*": {
+      "all" : { "base": "witchingandwizardry:blocks/plants/flowers/{magicflowertype}/{state}"}
+    }
+  },
+  "sideopaqueByType": {
+    "*-snow": {
+      "all": false, 
+      "down": true
+    },
+    "*": { "all": false }
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "replaceable": 3000,
+  "lightAbsorption": 3,
+  "resistance": 0.5,
+  "randomizeRotations": true,
+  "collisionbox": null,
+  "selectionbox": {
+    "x1": 0.125, "y1": 0, "z1": 0.125,
+    "x2": 0.875, "y2": 0.25, "z2": 0.875
+  },
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "rainPermeable": false,
+  "materialDensity": 200,
+  "randomSizeAdjust": 0.05,
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "frostable": true,
+  "randomDrawOffset": true,
+  "attributes": {
+    "stackable": true,
+    "forageStatAffected": true,
+    "reinforcable": true,
+    
+    "resetBelowTemperature": -2,
+    "stopBelowTemperature": 4,
+    "revertBlockBelowTemperature": -4,
+
+    "resetAboveTemperature": 35,
+    "stopAboveTemperature": 30,
+    "revertBlockAboveTemperature": 38
+  },
+  "dropsByType": {
+    "*-aconite-*": [ 
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "tool": "knife" },
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "tool": "scythe" },
+      { "type": "block", "code": "witchingandwizardry:magicflower-{magicflowertype}-{state}-free", "tool": "shovel" }
+    ],
+    "*-agapanthus-*": [ 
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "quantity": { "avg": 4.5, "var": 1.5 }, "tool": "knife" },
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "quantity": { "avg": 4.5, "var": 1.5 }, "tool": "scythe" },
+      { "type": "block", "code": "witchingandwizardry:magicflower-{magicflowertype}-{state}-free", "tool": "shovel" }
+    ],
+    "*-alihotsy-*": [ 
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "quantity": { "avg": 12, "var": 4 }, "tool": "knife" },
+      { "type": "item", "code": "witchingandwizardry:plantingredient-{magicflowertype}-raw", "quantity": { "avg": 12, "var": 4 }, "tool": "scythe" },
+      { "type": "block", "code": "witchingandwizardry:magicflower-{magicflowertype}-{state}-free", "tool": "shovel" }
+    ]
+  },
+  "renderpass": "OpaqueNoCull"
+}

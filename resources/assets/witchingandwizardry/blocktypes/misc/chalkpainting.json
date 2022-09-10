@@ -1,0 +1,57 @@
+{
+  "code": "chalkpainting",
+  "variantgroups": [
+    { "code":"type", "states": ["icon", "sigil", "center"] },
+    { "code":"chalk", "states": ["none","magic", "unstable"] },
+    { "code":"texture", "states": ["0", "1", "2"] },
+    { "code":"side", "states": ["north", "east", "south", "west", "up", "down"] },
+    { "code":"rotation", "loadFromProperties": "game:abstract/horizontalorientation" }
+  ],
+  "creativeinventory": { "witchingandwizardry-tab": ["*-down"] },
+  "behaviors": [
+    {"name": "NoParticles"},
+    {"name": "CoatBBh", "properties": {"orientName": "side"}}
+  ],
+  "entityclassByType": {
+    "*-center-*": "chalkCenterBE",
+    "*-icon-*": null,
+    "*-sigil-*": null
+  },
+  "blockmaterial": "Other",
+  "skipVariants": [
+    "chalkpainting-icon-magic-*",
+    "chalkpainting-icon-unstable-*",
+    "chalkpainting-sigil-none-*",
+    "chalkpainting-center-none-*"
+  ],
+  "allowedVariants": [
+    "chalkpainting-icon-none-0-*",
+    "chalkpainting-icon-none-1-*",
+    "chalkpainting-icon-none-2-*",
+
+    "chalkpainting-sigil-magic-0-*",
+    "chalkpainting-sigil-magic-1-*",
+    "chalkpainting-sigil-magic-2-*"
+  ],
+  "textures": {
+    "base" : { "base": "witchingandwizardry:blocks/misc/chalk/{type}-{chalk}-{texture}"}
+  },
+  "lightAbsorption": 0,
+  "replaceable": 6000,
+  "shapebytype": {
+    "*-down-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateYByType": {  "*-north": 0, "*-east": 270,"*-south": 180, "*-west": 90 }},
+    "*-up-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateX": 180,"rotateYByType": {  "*-north": 180, "*-east": 270,"*-south": 0, "*-west": 90 } },
+    "*-north-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateX": 90,"rotateYByType": {  "*-north": 0, "*-east": 270,"*-south": 180, "*-west": 90 } },
+    "*-east-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateXByType": {  "*-north": 180, "*-east": 270,"*-south": 0, "*-west": 90 }, "rotateY": 180, "rotateZ": 270 },
+    "*-west-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateXByType": {  "*-north": 0, "*-east": 270,"*-south": 180, "*-west": 90 }, "rotateY": 0, "rotateZ": 270 },
+    "*-south-*": { "base": "witchingandwizardry:blocks/misc/chalkblock", "rotateX": 270,"rotateYByType": {  "*-north": 0, "*-east": 270,"*-south": 180, "*-west": 90 } }
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  },
+  "selectionbox": null,
+  "collisionbox": null
+}

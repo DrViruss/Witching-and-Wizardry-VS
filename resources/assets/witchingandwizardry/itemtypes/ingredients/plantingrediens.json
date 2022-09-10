@@ -1,0 +1,15 @@
+{
+  "code": "plantingredient",
+  "variantgroups": [
+    {
+      "loadFromProperties": "witchingandwizardry:plants/magicflowertype"
+    },
+    {
+      "code": "type",
+      "states": [ "raw" ]
+    }
+  ],
+  "creativeinventory": { "witchingandwizardry-tab": ["*"] },
+  "maxstacksize": 64,
+  "texture": { "base": "witchingandwizardry:items/ingredients/{magicflowertype}-{type}" }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "witchingandwizardry",
+  "name": "Witching and Wizardry",
+  "authors": ["DrViruss"],
+  "description": "Magic mod :D NEED ENT!!",
+  "version": "0.0.1",
+  "dependencies": {
+    "game": "1.17.2"
+  }
+}

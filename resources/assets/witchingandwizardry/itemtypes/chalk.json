@@ -1,0 +1,79 @@
+{
+  "code": "chalk",
+  "class": "Chalk",
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "none","magic","unstable" ]
+    },
+    {
+      "code": "color",
+      "states": [ "black","red","white","green","yellow","purple","grey" ]
+    }
+  ],
+  "skipVariants": [
+    "chalk-unstable-white",
+    "chalk-unstable-yellow",
+    "chalk-unstable-green",
+    "chalk-unstable-grey"
+  ],
+  "creativeinventory": { "witchingandwizardry-tab": ["*"] },
+  "shape": {"base": "witchingandwizardry:items/chalk"},
+  "maxstacksize": 8,
+  "durability" : 128,
+  "texture": { "base": "witchingandwizardry:items/chalk/{color}-{type}" },
+  "guiTransform": {
+    "translation": {
+      "x": 36,
+      "y": 5,
+      "z": 0
+    },
+    "rotation": {
+      "x": 23,
+      "y": -5,
+      "z": 141
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 2.16
+  },
+  "fpHandTransform": {
+    "translation": {
+      "x": 0.4,
+      "y": 0,
+      "z": 1
+    },
+    "rotation": {
+      "x": -91,
+      "y": 48,
+      "z": 42
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 2.38
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.6,
+      "y": 0.3,
+      "z": 0.5
+    },
+    "rotation": {
+      "x": -2,
+      "y": 8,
+      "z": -149
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 0.37
+  }
+}

@@ -1,0 +1,32 @@
+{
+	"version": "0.2.0",
+	"configurations": [{
+		"name": "Launch Client (Linux)",
+		"type": "mono",
+		"request": "launch",
+		"preLaunchTask": "Build (Debug)",
+		"program": "/usr/share/vintagestory/Vintagestory.exe",
+		"args": [
+			"--playStyle" , "creativebuilding",
+			"--openWorld" , "WnW testing",
+			"--addModPath", "${workspaceFolder}/bin/Debug/net461",
+			"--addOrigin" , "${workspaceFolder}/resources/assets",
+		],
+		"console": "internalConsole",
+		"internalConsoleOptions": "openOnSessionStart",
+	},{
+		"name": "Launch Client (Windows)",
+		"type": "clr",
+		"request": "launch",
+		"preLaunchTask": "Build (Debug)",
+		"program": "/usr/share/vintagestory/Vintagestory.exe",
+		"args": [
+			"--playStyle" , "preset-surviveandbuild",
+			"--openWorld" , "modding test world",
+			"--addModPath", "${workspaceFolder}/bin/Debug/net461",
+			"--addOrigin" , "${workspaceFolder}/resources/assets",
+		],
+		"console": "internalConsole",
+		"internalConsoleOptions": "openOnSessionStart",
+	}]
+}
