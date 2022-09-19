@@ -14,8 +14,8 @@ namespace witchingandwizardry.GUIs
 
 
         public static void Init(ICoreClientAPI capi){
-            initChalks(capi);
-
+            // initChalks(capi);
+            
             capi.Logger.Debug("Waw: GUIs succesfull loaded ");
         }
 

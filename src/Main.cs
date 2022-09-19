@@ -3,7 +3,6 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 using witchingandwizardry.BlockEntities;
 using witchingandwizardry.Blocks;
-using witchingandwizardry.Blocks.BlockBehaviors;
 using witchingandwizardry.Items;
 using witchingandwizardry.GUIs;
 
@@ -21,7 +20,7 @@ namespace witchingandwizardry
             api.RegisterBlockEntityClass("MagicFlower", typeof(MagicFlowerBE));
             
             api.RegisterItemClass("Chalk",typeof(Chalk));
-            api.RegisterBlockBehaviorClass("CoatBBh",typeof(CoatBehavior));
+            api.RegisterBlockClass("ChalkPainting",typeof(ChalkPainting));
             api.RegisterBlockEntityClass("chalkCenterBE", typeof(ChalkCenterBE));
         }
         
@@ -33,6 +32,7 @@ namespace witchingandwizardry
         public override void StartServerSide(ICoreServerAPI api)
         {
             base.StartServerSide(api);
+            api.Logger.Debug("Hello from server");
             
             // Events.Init(api);
             // Worldgen.Init(api);

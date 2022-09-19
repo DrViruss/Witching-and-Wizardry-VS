@@ -1,17 +1,16 @@
 {
   "code": "chalkpainting",
   "variantgroups": [
-    { "code":"type", "states": ["icon", "sigil", "center"] },
+    { "code":"type", "states": ["base", "center"] },
     { "code":"chalk", "states": ["none","magic", "unstable"] },
     { "code":"texture", "states": ["0", "1", "2"] },
     { "code":"side", "states": ["north", "east", "south", "west", "up", "down"] },
     { "code":"rotation", "loadFromProperties": "game:abstract/horizontalorientation" }
   ],
-  "creativeinventory": { "witchingandwizardry-tab": ["*-down"] },
   "behaviors": [
-    {"name": "NoParticles"},
-    {"name": "CoatBBh", "properties": {"orientName": "side"}}
+    { "name": "NoParticles" }
   ],
+  "class":"ChalkPainting",
   "entityclassByType": {
     "*-center-*": "chalkCenterBE",
     "*-icon-*": null,
@@ -19,19 +18,16 @@
   },
   "blockmaterial": "Other",
   "skipVariants": [
-    "chalkpainting-icon-magic-*",
-    "chalkpainting-icon-unstable-*",
-    "chalkpainting-sigil-none-*",
     "chalkpainting-center-none-*"
   ],
   "allowedVariants": [
-    "chalkpainting-icon-none-0-*",
-    "chalkpainting-icon-none-1-*",
-    "chalkpainting-icon-none-2-*",
+    "chalkpainting-base-none-0-*",
+    "chalkpainting-base-none-1-*",
+    "chalkpainting-base-none-2-*",
 
-    "chalkpainting-sigil-magic-0-*",
-    "chalkpainting-sigil-magic-1-*",
-    "chalkpainting-sigil-magic-2-*"
+    "chalkpainting-base-magic-0-*",
+    "chalkpainting-base-magic-1-*",
+    "chalkpainting-base-magic-2-*"
   ],
   "textures": {
     "base" : { "base": "witchingandwizardry:blocks/misc/chalk/{type}-{chalk}-{texture}"}
@@ -52,6 +48,17 @@
   "sideopaque": {
     "all": "false"
   },
-  "selectionbox": null,
+  "selectionbox": {
+		"x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1,
+		"rotateXByType": {
+			"*-up-*": 180, "*-north-*": 90, "*-east-*": 90, "*-west-*": 90, "*-south-*": 270
+		},
+		"rotateYByType": {
+			"*-east-*": 180, "*-west-*": 0
+		},
+		"rotateZByType": {
+			"*-east-*": 270, "*-west-*": 270
+		}
+	},
   "collisionbox": null
 }
